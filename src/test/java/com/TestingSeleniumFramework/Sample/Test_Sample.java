@@ -1,4 +1,4 @@
-package com.TestingSeleniumFramework;
+package com.TestingSeleniumFramework.Sample;
 
 public class Test_Sample {
     public static void main(String[] args) {
