@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Shilpa/IdeaProjects/SeleniumAutomationFramework">
+        <classes>
+            <class name="com.TestingSeleniumFramework.Sample.Testng_Sample">
+                <methods>
+                    <include name="testSample0"/>
+                    <include name="testSample1"/>
+                </methods>
+            </class>
+            <class name="com.TestingSeleniumFramework.Sample.vwoTestCase.Test_vwologin">
+
+            </class>
+        </classes>
+    </test>
+</suite>

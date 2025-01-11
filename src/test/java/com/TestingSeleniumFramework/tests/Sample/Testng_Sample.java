@@ -1,4 +1,4 @@
-package com.TestingSeleniumFramework.Sample;
+package com.TestingSeleniumFramework.tests.Sample;
 
 import io.qameta.allure.Description;
 import org.testng.Assert;
