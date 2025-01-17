@@ -18,7 +18,11 @@ public class LoginHRPage {
 
     public void loginHRCreds(String user, String pwd){
         driver.get("https://awesomeqa.com/hr/web/index.php/auth/login");
-
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.findElement(username).sendKeys(user);
         driver.findElement(password).sendKeys(pwd);
         driver.findElement(submit_btn).click();

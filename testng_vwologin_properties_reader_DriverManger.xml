@@ -3,8 +3,10 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Shilpa/IdeaProjects/SeleniumAutomationFramework">
         <classes>
-            <class name="com.TestingSeleniumFramework.tests.Sample.vwoTestCase.Test_vwologin_Normal_01">
-       </class>
+
+            <class name="com.TestingSeleniumFramework.tests.Sample.vwoTestCase.Test_VWOLogin_POM_PropertyReader_DriverManger_05">
+
+            </class>
         </classes>
     </test>
 </suite>

@@ -1,9 +1,10 @@
 package com.TestingSeleniumFramework.pages.pageObjectModel.VMO;
 
+import com.TestingSeleniumFramework.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DashboardPage {
+public class DashboardPage extends BasePage {
 
     WebDriver driver;
 
@@ -16,12 +17,7 @@ public class DashboardPage {
 
     //Step 2 : Page Actions
     public String loggedInUserName(){
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
-
-        return driver.findElement(userNameDashboard).getText();
+       visibilityOfElement(userNameDashboard);
+        return getText(userNameDashboard);
     }
 }

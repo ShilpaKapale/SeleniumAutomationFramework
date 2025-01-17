@@ -16,9 +16,10 @@ public class TestOrangeHR_POM {
     @Owner("Shilpa")
     @Description("Verify that the login to OrangeHR")
     @Test
-    public void testLoginPositive(){
+    public void testLoginPositive() throws InterruptedException {
         WebDriver driver = new EdgeDriver();
         LoginHRPage loginHRPage = new LoginHRPage(driver);
+        Thread.sleep(3000);
         loginHRPage.loginHRCreds("admin","Hacker@4321");
 
         EmployeeListHomePage employeeListHomePage = new EmployeeListHomePage(driver);

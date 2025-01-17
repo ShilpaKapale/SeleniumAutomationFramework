@@ -1,9 +1,11 @@
 package com.TestingSeleniumFramework.pages.pageObjectModel.VMO;
 
+import com.TestingSeleniumFramework.base.BasePage;
+import com.TestingSeleniumFramework.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
     WebDriver driver;
 
@@ -21,31 +23,24 @@ public class LoginPage {
 
     //Step 2
     public String loginToVMOLoginInvalidCreds(String user,String pwd) {
-        driver.get("https://app.vwo.com");
-        driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pwd);
-        driver.findElement(signButton).click();
-        try {
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
-        String error_message_text = driver.findElement(error_message).getText();
+        openURL();
+        enterInput(username,user);
+        enterInput(password,pwd);
+        clickElement(signButton);
+        //presenceOfElement(error_message);
+        custom_wait();
+        String error_message_text = getText(error_message);
         return error_message_text;
 
     }
 
     public void loginToVMOLoginValidCreds(String user,String pwd)
     {
-        driver.get("https://app.vwo.com");
-        driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pwd);
-        driver.findElement(signButton).click();
-        try {
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
-            throw new RuntimeException(e);
-        }
+        openURL();
+        enterInput(username,user);
+        enterInput(password,pwd);
+        clickElement(signButton);
+        custom_wait();
 
     }
 }
