@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="com.TestingSeleniumFramework.listeners.RetryListener"/>
+    </listeners>
+
+
+    <test verbose="2" preserve-order="true" name="C:/Users/Shilpa/IdeaProjects/SeleniumAutomationFramework">
+        <classes>
+
+            <class name="com.TestingSeleniumFramework.tests.Sample.vwoTestCase.Test_VWOLogin_ImprovedPOM_PropertyReader_DriverManger_log_Listener_07">
+
+            </class>
+        </classes>
+    </test>
+</suite>

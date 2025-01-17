@@ -51,6 +51,10 @@ public class BasePage {
         return getDriver().findElement(by).getText();
     }
 
+    public String getText(WebElement by){
+        return by.getText();
+    }
+
     public WebElement presenceOfElement(By elementLocation) {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(20)).until(ExpectedConditions.presenceOfElementLocated(elementLocation));
     }
